@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-card">
+        <h1 style="color: rgb(142, 147, 194)">SkySense</h1>
+        <div>
+          <input type="text" id="city-input" placeholder="Enter city name" />
+          <button
+            id="city-input-btn"
+            onclick="weatherFn($('#city-input').val())"
+          >
+            Search
+          </button>
+        </div>
+        <div id="weather-info" class="animate__animated animate__fadeIn">
+          <img class="weather-icon" src="./assets/img/weather-forecast.png" />
+          <p id="description"></p>
+          <p id="temperature"></p>
+          <h3 id="city-name"></h3>
+          <div class="wind-speed-cont">
+            <div class="app-component">
+              <img class="app-icons" src="./assets/img/calendar.png" />
+              <p id="date"></p>
+            </div>
+            <div class="app-component">
+              <img class="app-icons" src="./assets/img/wind.png" />
+              <p id="wind-speed"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+  </body>
+</html>
